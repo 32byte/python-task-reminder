@@ -2,34 +2,22 @@
 
 ## File format
 ```
-File format: 
-    [date/timing info] Task name
-Date:
-    Simply put the date in dd/mm/yy format
-    dd/mm/yyyy also accept
-    dd/mm also accpeted, just assumes it is this year
-    no leading zero needed, so 1/2/21 would be valid
+File format v2: 
+    This format is very simmilar to the crontab format.
+    You can check it out here: https://crontab.guru/
 
-    '.' as a separator instead of '/' aslo accepted
-    You can also mix the seperators if you wish
-Other timing info:
-    If you want to have a task each monday then do:
-    [Mon] task name
-    If you want to be it every 2nd week on monday:
-    [Mon 2] task name (it will start with the first
-        week of the year and continue in the rythm)
-    If you want to be it the same as above, but
-        offsetted by 1 week:
-    [Mon 2 1]
+    Basically it goes like this:
+    MINUTE HOUR DAY MONTH DAY(WEEK)
 
-    So generally speaking it's like this:
-    [Weekday | every Nth week | +/- offset] 
-    (without the "|" in between, is just for readability)
+    I would really recommend checking out the website above.
+    You can click on the tags (minute, hour, day, etc.) to see valid input
 
-    Accepted as weekdays would be:
-    Mon,Tue,Wed,Thu,Fri,Sat,Sun
-Task name:
-    Has to be in one line
+Not implemented yet:
+    Value list seperator with ','
+    Ranges with '-'
+    Step values with '/'
+
+    @yearly, etc are currently not planned to be implemented.
 ```
 
 ## How to setup (work in progress)
