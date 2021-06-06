@@ -1,0 +1,5 @@
+# This will run every sunday at 18:00
+00 18 * * Sun Do workout
+
+# This is an appointment on the 12.06. at 12:00
+00 12 12 6 * Dentist appointment

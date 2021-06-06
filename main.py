@@ -1,7 +1,11 @@
-from util import send_email, parse
+from util import *
 
 def run():
-    print(parse('data.txt'))
+    tasks = parse('data.txt')
+
+    email = generate_email(tasks)
+
+    send_email(email)
 
 
 if __name__ == '__main__':

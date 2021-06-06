@@ -1,34 +1,29 @@
 # Python task reminder:
 
-## File format
+## How to setup
 ```
-File format v2: 
-    This format is very simmilar to the crontab format.
-    You can check it out here: https://crontab.guru/
-
-    Basically it goes like this:
-    MINUTE HOUR DAY MONTH DAY(WEEK)
-
-    I would really recommend checking out the website above.
-    You can click on the tags (minute, hour, day, etc.) to see valid input
-
-Not implemented yet:
-    Value list seperator with ','
-    Ranges with '-'
-    Step values with '/'
-
-    @yearly, etc are currently not planned to be implemented.
-```
-
-## How to setup (work in progress)
-```
-For now the code doesn't really do anything
-but this would be a guide on how to set it up once it's done.
-
 1. Create/Select a gmail account you want to use.
 2. Enable less secure apps for it with this link:
     https://myaccount.google.com/lesssecureapps
-3. Create and edit the tasks.txt file
+3. Edit the config.py file
+    You can also find examples in the example folder
 4. Upload all the files on where you want to host it and keep the app running
+    Currently the main file has to be run only once a day and preferably in the morning
+5. Create the tasks.txt file
+    It has to be in a specific format, see below
+    You can also find examples in the example folder
+```
 
+## File format
+```
+The file format consists out of 2 parts
+
+The first part is the date in the crontab format:
+    You can check it out here: https://crontab.guru/
+    The only thing that is not implemented is the @yearly, @monthly, etc
+
+The second part is the content:
+    The only limitation is that they can only consist out of one line
+
+All lines starting with a '#' are considered comments and thus ignored
 ```
