@@ -28,3 +28,11 @@ The second part is the content:
 
 All lines starting with a '#' are considered comments and thus ignored
 ```
+
+## Verifying the file
+```
+If you're not sure wheather the tasks.txt file is valid you can verify it
+You can do it by running "python verify.py"
+
+In case you don't verify the email and tasks.txt is not valid you will get notified through the email
+```

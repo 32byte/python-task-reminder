@@ -3,15 +3,10 @@ from util import *
 def run():
     tasks = parse('tasks.txt')
 
-    email = ''
-
     if isinstance(tasks, list):
-        email = generate_email(tasks)
+        print('File is valid!')
     else:
-        email = tasks
-
-    send_email(email)
-
+        print(tasks)
 
 if __name__ == '__main__':
     run()
