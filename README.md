@@ -9,7 +9,8 @@
     You can also find examples in the example folder
 4. Upload all the files on where you want to host it and keep the app running
     Currently the main file has to be run only once a day and preferably in the morning
-5. Create the tasks.txt file
+5. Install all requirements by running "pip install -r requirements.txt" 
+6. Create the tasks.txt file
     It has to be in a specific format, see below
     You can also find examples in the example folder
 ```
