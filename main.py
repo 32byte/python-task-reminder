@@ -1,7 +1,7 @@
 from util import *
 
 def run():
-    tasks = parse('data.txt')
+    tasks = parse('tasks.txt')
 
     email = generate_email(tasks)
 
