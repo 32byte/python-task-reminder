@@ -30,16 +30,20 @@ def parse(filename):
                 continue;
 
             try:
-                cron_input = ' '.join(line[:5])
+                cron_input = '* * ' + ' '.join(line[2:5])
+                print(cron_input)
                 content = ' '.join(line[5:])
 
-                cron = croniter(cron_input, today)
+                cron = croniter(cron_input, datetime(2021, 6, 9, 0, 0))
+                cron_original = croniter(' '.join(line[:5]), datetime(2021, 6, 9, 0, 0))
 
-                next_time = cron.get_next(datetime)
+                next_date = cron.get_next(datetime).date()
+                original_time = cron_original.get_next(datetime).time()
 
                 # If cron matches, then add this to the list
-                if next_time.date() == today.date():
-                    cron_time = next_time.strftime(DATE_FORMAT)
+                if next_date == today.date():
+                    cron_time = datetime(next_date.year, next_date.month, next_date.day, \
+                        original_time.hour, original_time.minute).strftime(DATE_FORMAT)
 
                     output.append([cron_time, content])
             except:
