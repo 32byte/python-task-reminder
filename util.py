@@ -31,11 +31,10 @@ def parse(filename):
 
             try:
                 cron_input = '* * ' + ' '.join(line[2:5])
-                print(cron_input)
                 content = ' '.join(line[5:])
 
-                cron = croniter(cron_input, datetime(2021, 6, 9, 0, 0))
-                cron_original = croniter(' '.join(line[:5]), datetime(2021, 6, 9, 0, 0))
+                cron = croniter(cron_input, today)
+                cron_original = croniter(' '.join(line[:5]), today)
 
                 next_date = cron.get_next(datetime).date()
                 original_time = cron_original.get_next(datetime).time()
